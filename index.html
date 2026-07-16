@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD 1.5 and Realistic Vision: Experimenting with Cfg, Seed, Steps,LoRas and Controlnet</title>
-    
-    <!-- Google Fonts for clean typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -144,8 +142,7 @@
 
 <div class="container">
 
-    <!-- HEADER: Title, Single Author, Affiliation -->
-    <header>
+        <header>
         <h1>SD 1.5 and Realistic Vision: Experimenting with Cfg, Seed, Steps,LoRas and Controlnet</h1>
         
         <div class="authors">
@@ -157,30 +154,26 @@
         </div>
     </header>
 
-    <!-- 1. ABSTRACT SECTION -->
-    <section id="abstract">
+        <section id="abstract">
         <h2>Abstract</h2>
         <p>
             AI Image generation is available for every one that owns a smartphone or a computer. Results often feel completely random even though they can be controlled by certain Settings like Steps in the Denoising process, classifier guidance scale and Seed. Additional options like Low Rand Adaptation Models or ControlNets give the user more control over the output. 
         </p>
         
-        <!-- Teaser Image under Abstract -->
-        <div class="img-container">
+                <div class="img-container">
             <img src="images/SD1.5_LoRa0.5_30steps.webp" alt="SD 1.5 LoRa 0.5 (30 Steps)" class="project-img">
             <p class="caption"><strong>Figure 1:</strong> Main teaser image demonstrating generations produced using a 0.5 LoRA strength configuration.</p>
         </div>
     </section>
 
-    <!-- 2. BACKGROUND SECTION -->
-    <section id="background">
+        <section id="background">
         <h2>Background</h2>
         <p>
             As described image generation via Diffusion Models often seem random and without control. This Impresssion is being approached with this Web App. The Goal is to give the user an understanding and a certain feeling of control over the output. Introduce the context of your project here. What is the history or state-of-the-art of this topic? Why is this specific problem important to solve, and what challenges did previous work face that you are trying to address? Introduce the context of your project here. What is the history or state-of-the-art of this topic? Why is this specific problem important to solve, and what challenges did previous work face that you are trying to address?
         </p>
     </section>
 
-    <!-- 3. APPROACH SECTION -->
-    <section id="approach">
+        <section id="approach">
         <h2>Approach</h2>
         <p>
             Explain your method, pipeline, or framework here. Detail the steps you took to achieve your goal, the algorithms used, or the system design. The code for this Web App was generated using Gemini AI. This Image showing the structure works with striped lines that stand for an optional Step in the Workflow. First you can type in your prompt and optionaly your negative prompt. Then you can choose model realistic Vision or SD 1.5. After this step ou can either jump staright to generation by setting seed, cfg and steps (or use default values) or you can choos a LoRA Upload or/and a ControlNet Upload and set its strength as impact on output. Finally toggle Metadata on and off depending on preference 
@@ -191,21 +184,18 @@
         </div>
     </section>
 
-    <!-- 4. RESULTS SECTION -->
-    <section id="results">
+        <section id="results">
         <h2>Results</h2>
         <p>
             Showcase your experimental results, data visualizations, or generated samples. Next to a classic generation method using the model itself, an added self trained LoRa impacts the generation and makes more precise results possible. One of the two LoRas is the "Saltlake LoRa" that was trained with a Dataset of a Saltlake in Utah. Without LoRa no typical features attributes visible in image they become evident once the LoRa is applied. 
         </p>
 
-        <!-- New Image: Dataset Samples Grid (webp format) -->
-        <div class="img-container">
+                <div class="img-container">
             <img src="images/DatasetSamplesGrid.webp" alt="Dataset Samples Grid" class="project-img">
             <p class="caption"><strong>Figure 3:</strong> Grid visualization of sample images from the training dataset.</p>
         </div>
 
-        <!-- Comparative Image Grid for Saltlake LoRa -->
-        <div class="image-grid">
+                <div class="image-grid">
             <div class="grid-item">
                 <img src="images/SD1.5_NoLoRa_30steps.webp" alt="SD 1.5 No LoRa">
                 <div class="item-label">SD1.5_NoLoRa_30steps.webp<br><strong>(LoRA Strength: 0.0)</strong></div>
@@ -219,45 +209,58 @@
                 <div class="item-label">SD1.5_LoRaStrength1_30Steps.webp<br><strong>(LoRA Strength: 1.0)</strong></div>
             </div>
         </div>
-        <p class="caption"><strong>Figure 4:</strong> Side-by-side qualitative comparison examining the visual output under varying LoRA strengths at 30 denoising steps.</p>
+
+                <div class="image-grid">
+            <div class="grid-item">
+                <img src="images/RealisitcVisionNoLoRa_30steps.webp" alt="Realistic Vision No LoRa">
+                <div class="item-label">RealisitcVisionNoLoRa_30steps.webp<br><strong>(LoRA Strength: 0.0)</strong></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/RealisitcVision_0.5LoRaStrenth_30steps.webp" alt="Realistic Vision LoRa 0.5">
+                <div class="item-label">RealisitcVision_0.5LoRaStrenth_30steps.webp<br><strong>(LoRA Strength: 0.5)</strong></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/RealisticVision_Strength1_30steps.webp" alt="Realistic Vision LoRa Strength 1">
+                <div class="item-label">RealisticVision_Strength1_30steps.webp<br><strong>(LoRA Strength: 1.0)</strong></div>
+            </div>
+        </div>
+
+        <p class="caption"><strong>Figure 4 & 5:</strong> Side-by-side qualitative comparisons examining the visual output under varying LoRA strengths at 30 denoising steps using SD 1.5 (top) and Realistic Vision (bottom).</p>
     
         <p>
             You can use the clean grid below to display multiple images side-by-side. The second LoRa, "Denim Jeans LoRa", aims to enhance the texture and realism of denim garments in generated images, which can often look flat or overly smooth. The comparisons below highlight the effect of this LoRa, where the denim jeans generated without LoRa lack specific texture, making them look less realistic. Once the LoRa is applied, the details and folds in the fabric become more clear, significantly improving the realism and visual fidelity of the denim clothing.
         </p>
 
-        <!-- Stacking Images: Denim Jeans LoRa Comparison -->
-        <div class="img-container">
+                <div class="img-container">
             <img src="images/ManwearingDenimJeansNoLoRaRealisticVision.webp" alt="Man Wearing Denim Jeans - No LoRa" class="project-img">
-            <p class="caption"><strong>Figure 5:</strong> Generation of a man wearing denim jeans using Realistic Vision model without any LoRA applied.</p>
+            <p class="caption"><strong>Figure 6:</strong> Generation of a man wearing denim jeans using Realistic Vision model without any LoRA applied.</p>
         </div>
 
         <div class="img-container">
             <img src="images/ManWearingDenimJeanswithLoRaRealisitcvision.webp" alt="Man Wearing Denim Jeans - with LoRa" class="project-img">
-            <p class="caption"><strong>Figure 6:</strong> Generation of a man wearing denim jeans using Realistic Vision model with the Denim Jeans LoRa applied.</p>
+            <p class="caption"><strong>Figure 7:</strong> Generation of a man wearing denim jeans using Realistic Vision model with the Denim Jeans LoRa applied.</p>
         </div>
 
         <div class="img-container">
             <img src="images/WomanWearingDenimJeansNoLoRaRealisitcvision.webp" alt="Woman Wearing Denim Jeans - No LoRa" class="project-img">
-            <p class="caption"><strong>Figure 7:</strong> Generation of a woman wearing denim jeans using Realistic Vision model without any LoRA applied.</p>
+            <p class="caption"><strong>Figure 8:</strong> Generation of a woman wearing denim jeans using Realistic Vision model without any LoRA applied.</p>
         </div>
 
         <div class="img-container">
             <img src="images/WomanwearingDenimJeansRealsitcvisionwithLoRa.webp" alt="Woman Wearing Denim Jeans - with LoRa" class="project-img">
-            <p class="caption"><strong>Figure 8:</strong> Generation of a woman wearing denim jeans using Realistic Vision model with the Denim Jeans LoRa applied.</p>
+            <p class="caption"><strong>Figure 9:</strong> Generation of a woman wearing denim jeans using Realistic Vision model with the Denim Jeans LoRa applied.</p>
         </div>
 
     </section>
 
-    <!-- 5. CONCLUSION SECTION -->
-    <section id="conclusion">
+        <section id="conclusion">
         <h2>Conclusion</h2>
         <p>
             Wrap up your project webpage with a clear conclusion. Summarize your contributions, talk about potential real-world applications, and outline any limitations or interesting directions for future work. Using Diffusion Models for image generation can be controlled by various parameters. Low Rank Adaptation Models can expand the output variety of a Model. Still image generation reaches its boundaries when it comes to contrasting visual conscepts for example in the prompt used or uploaded Image for ControlNet. At this exact point the user may also find the most interesting results because the AI actually has to create something "new".
         </p>
     </section>
 
-    <!-- BIBTEX CITATION -->
-    <section id="citation">
+        <section id="citation">
         <h2>BibTeX</h2>
         <p>If you find this project or work useful, please cite it using the following format:</p>
         <pre><code>@article{voncastell2026project,
@@ -268,8 +271,7 @@
 }</code></pre>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+        <footer>
         <p>Website template designed for project presentations.</p>
         <p style="margin-top: 10px; color: #999999;">© 2026 Felix von Castell</p>
     </footer>
